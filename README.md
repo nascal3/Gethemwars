@@ -18,7 +18,7 @@ DB_CONNECTION=mysql
 MYSQL_HOST=localhost
 MYSQL_PORT=3306
 MYSQL_USER=<database_user>
-MYSQL_PASSWORD=<database_user>
+MYSQL_PASSWORD=<database_password>
 MYSQL_DB_NAME=gethewars
 BASE_URL=https://swapi.dev/api
 ```
@@ -50,18 +50,18 @@ docker compose up
 ## API Endpoints
 Get a listing of the names of StarWars movies along with their opening crawls.
 ```
-GET - http://<HOST_URL>/starwars
+GET - https://gethemwars-u4m9b.ondigitalocean.app/starwars
 ```
 Get a listing of the names of StarWars movies characters with filters:
   - Filter by name in ascending order set `criteriaParam` to `name`
   - Filter by gender in ascending order set `criteriaParam` to `gender`
   - Filter by height in ascending order set `criteriaParam` to `height`
 ```
-GET - http://<HOST_URL>/starwars/people/<criteriaParam>/filter
+GET - https://gethemwars-u4m9b.ondigitalocean.app/starwars/people/<criteriaParam>/filter
 ```
 To filter all results by gender:
  - Filter by male gender set `selectedGender` to `male`
  - Filter by female gender set `selectedGender` to `female`
 ```
-GET - http://<HOST_URL>/starwars/people/<criteriaParam>/filter?gender=<selectedGender>
+GET - https://gethemwars-u4m9b.ondigitalocean.app/starwars/people/<criteriaParam>/filter?gender=<selectedGender>
 ```

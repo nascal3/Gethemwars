@@ -7,9 +7,9 @@ services:
       context: .
       dockerfile: dockerfile
     ports:
-      - '80:3333'
+      - '81:3333'
     expose:
-      - '80'
+      - '81'
     volumes:
       - /app/node_modules
       - .:/app
@@ -24,12 +24,14 @@ services:
       - MYSQL_PORT=3306
       - MYSQL_USER=root
       - MYSQL_PASSWORD=
-      - MYSQL_DB_NAME=demo_adonis
+      - MYSQL_DB_NAME=gethewars
+      - BASE_URL=https://swapi.dev/api
 #    links:
 #      - db
 #    command: >
 #      node ace migration:run
 #      && npm run dev
+#    command: npm run dev
 
 #  db:
 #    image: mysql
